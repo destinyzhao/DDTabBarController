@@ -12,6 +12,8 @@
 
 @interface DDTabBarController ()
 
+@property (strong, nonatomic) DDTabBarButton *centerButton;
+
 @end
 
 @implementation DDTabBarController
@@ -38,7 +40,23 @@
     [self setBadgeWithIndex:@"8" index:1];
     
     //设定Tabbar的颜色
-    [[UITabBar appearance] setBackgroundColor:[UIColor blackColor]];
+    UIView *view = [UIView new];
+    view.frame = self.tabBar.bounds;
+    view.backgroundColor = [UIColor blackColor];
+    [[UITabBar appearance] insertSubview:view atIndex:0];
+}
+
+- (void)viewDidLayoutSubviews
+{
+    [super viewDidLayoutSubviews];
+    [self.tabBar bringSubviewToFront:self.centerButton];
+}
+
+- (void)viewDidAppear:(BOOL)animated
+{
+    [super viewDidAppear:animated];
+    
+//    [self.tabBar bringSubviewToFront:self.centerButton];
 }
 
 - (void)setupViewController
@@ -81,13 +99,13 @@
 
 - (void)setupCenterButton
 {
-     DDTabBarButton *centerButton = [[DDTabBarButton alloc] initWithTabBar:self.tabBar forItemIndex:2];
-    [centerButton setHeightOffset:5];
-    [centerButton setImage:[UIImage imageNamed:@"tab_bar_item3_n"]
+    self.centerButton = [[DDTabBarButton alloc] initWithTabBar:self.tabBar forItemIndex:2];
+    [self.centerButton setHeightOffset:5];
+    [self.centerButton setImage:[UIImage imageNamed:@"tab_bar_item3_n"]
                                         forState:UIControlStateNormal];
-    [centerButton setImage:[UIImage imageNamed:@"tab_bar_item3_s"]
+    [self.centerButton setImage:[UIImage imageNamed:@"tab_bar_item3_s"]
                                         forState:UIControlStateHighlighted];
-    [centerButton addTarget:self
+    [self.centerButton addTarget:self
                      action:@selector(centerButtonPressed:)
                                  forControlEvents:UIControlEventTouchUpInside];
 }
