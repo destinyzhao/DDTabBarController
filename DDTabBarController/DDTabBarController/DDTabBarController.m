@@ -87,16 +87,18 @@
     for (NSInteger i = 0; i < viewControllerArray.count; i++) {
         
         if (i == 2) {
+            [self setupCenterButton];
             continue;
         }
         UINavigationController *navi = viewControllerArray[i];
         navi.tabBarItem = [DDTabBarItem itemWithTitle:titleArray[i] normalImg:normalImgArray[i] selectImg:selectedImgArray[i]];
     }
     
-    [self setupCenterButton];
 
 }
 
+#pragma mark-
+#pragma mark- 创建中间按钮
 - (void)setupCenterButton
 {
     self.centerButton = [[DDTabBarButton alloc] initWithTabBar:self.tabBar forItemIndex:2];
