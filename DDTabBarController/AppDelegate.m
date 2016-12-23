@@ -7,6 +7,7 @@
 //
 
 #import "AppDelegate.h"
+#import "UITabBar+Badge.h"
 
 @interface AppDelegate ()
 
@@ -21,6 +22,9 @@
 - (void)initTabBarController
 {
     _customTabBarController = [DDTabBarController sharedTabBarController];
+    [_customTabBarController.tabBar showBadgeOnItemIndex:0];
+    [_customTabBarController.tabBar showBadgeOnItemIndex:1];
+
     self.window.rootViewController = _customTabBarController ;
 }
 

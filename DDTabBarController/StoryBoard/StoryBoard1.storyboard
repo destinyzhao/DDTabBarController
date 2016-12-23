@@ -1,8 +1,12 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="OtA-Ee-lkW">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11542" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="OtA-Ee-lkW">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--Home View Controller-->
@@ -14,11 +18,11 @@
                         <viewControllerLayoutGuide type="bottom" id="YWs-Ra-HZ8"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="lij-pN-pxI">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="G1C-9I-WPG">
-                                <rect key="frame" x="20" y="114" width="280" height="40"/>
+                                <rect key="frame" x="20" y="114" width="335" height="40"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="asw-Bw-OOy"/>
                                 </constraints>
@@ -28,17 +32,17 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="duu-55-bkf">
-                                <rect key="frame" x="10" y="539" width="300" height="21"/>
-                                <color key="backgroundColor" red="0.63137254899999995" green="0.63137254899999995" blue="0.63137254899999995" alpha="1" colorSpace="calibratedRGB"/>
+                                <rect key="frame" x="10" y="638" width="355" height="21"/>
+                                <color key="backgroundColor" red="0.63137254899999995" green="0.63137254899999995" blue="0.63137254899999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="21" id="gyx-jc-k5e"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="YWs-Ra-HZ8" firstAttribute="top" secondItem="duu-55-bkf" secondAttribute="bottom" constant="8" id="0C4-4e-NCu"/>
                             <constraint firstAttribute="trailing" secondItem="G1C-9I-WPG" secondAttribute="trailing" constant="20" id="7mj-iP-n1W"/>
@@ -66,15 +70,15 @@
                         <viewControllerLayoutGuide type="bottom" id="hQA-kY-1Ht"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="Y4r-pL-olQ">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SsB-ou-gX6">
-                                <rect key="frame" x="0.0" y="64" width="320" height="494"/>
-                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.39949324320000001" colorSpace="calibratedRGB"/>
+                                <rect key="frame" x="0.0" y="64" width="375" height="593"/>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.39949324320000001" colorSpace="custom" customColorSpace="sRGB"/>
                             </view>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="SsB-ou-gX6" secondAttribute="trailing" id="7uS-VU-hn1"/>
                             <constraint firstItem="SsB-ou-gX6" firstAttribute="leading" secondItem="Y4r-pL-olQ" secondAttribute="leading" id="CeI-C7-Pi0"/>
@@ -85,14 +89,13 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qwk-h6-qJs" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1573" y="416"/>
+            <point key="canvasLocation" x="1754" y="415"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="qI7-Qu-wbJ">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="OtA-Ee-lkW" customClass="DDNavigationController" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="fMm-NI-Dme">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>

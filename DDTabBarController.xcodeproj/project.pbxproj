@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		FA14F0B81E0D21A50074D251 /* UITabBar+Badge.m in Sources */ = {isa = PBXBuildFile; fileRef = FA14F0B71E0D21A50074D251 /* UITabBar+Badge.m */; };
 		FAB269971D51BFDC000ED39B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = FAB269961D51BFDC000ED39B /* main.m */; };
 		FAB2699A1D51BFDC000ED39B /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = FAB269991D51BFDC000ED39B /* AppDelegate.m */; };
 		FAB269A21D51BFDC000ED39B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FAB269A11D51BFDC000ED39B /* Assets.xcassets */; };
@@ -23,7 +24,6 @@
 		FAB269DE1D51C2FB000ED39B /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FAB269DD1D51C2FB000ED39B /* HomeViewController.m */; };
 		FAB269E21D51C325000ED39B /* BaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FAB269E11D51C325000ED39B /* BaseViewController.m */; };
 		FAB269E61D51C5EA000ED39B /* DDTabBarItem.m in Sources */ = {isa = PBXBuildFile; fileRef = FAB269E51D51C5EA000ED39B /* DDTabBarItem.m */; };
-		FAE725331D51D5F000555251 /* DDTabBarButton.m in Sources */ = {isa = PBXBuildFile; fileRef = FAE725321D51D5F000555251 /* DDTabBarButton.m */; };
 		FAE725361D51D86200555251 /* HomeDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FAE725351D51D86200555251 /* HomeDetailViewController.m */; };
 /* End PBXBuildFile section */
 
@@ -45,6 +45,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		FA14F0B61E0D21A50074D251 /* UITabBar+Badge.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITabBar+Badge.h"; sourceTree = "<group>"; };
+		FA14F0B71E0D21A50074D251 /* UITabBar+Badge.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITabBar+Badge.m"; sourceTree = "<group>"; };
 		FAB269921D51BFDC000ED39B /* DDTabBarController.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DDTabBarController.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FAB269961D51BFDC000ED39B /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		FAB269981D51BFDC000ED39B /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -74,8 +76,6 @@
 		FAB269E31D51C357000ED39B /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
 		FAB269E41D51C5EA000ED39B /* DDTabBarItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDTabBarItem.h; sourceTree = "<group>"; };
 		FAB269E51D51C5EA000ED39B /* DDTabBarItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DDTabBarItem.m; sourceTree = "<group>"; };
-		FAE725311D51D5F000555251 /* DDTabBarButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDTabBarButton.h; sourceTree = "<group>"; };
-		FAE725321D51D5F000555251 /* DDTabBarButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DDTabBarButton.m; sourceTree = "<group>"; };
 		FAE725341D51D86200555251 /* HomeDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeDetailViewController.h; sourceTree = "<group>"; };
 		FAE725351D51D86200555251 /* HomeDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeDetailViewController.m; sourceTree = "<group>"; };
 		FAE725381D51D94300555251 /* MacroDefines.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MacroDefines.h; sourceTree = "<group>"; };
@@ -175,8 +175,8 @@
 		FAB269C81D51C04D000ED39B /* DDTabBarController */ = {
 			isa = PBXGroup;
 			children = (
-				FAE725311D51D5F000555251 /* DDTabBarButton.h */,
-				FAE725321D51D5F000555251 /* DDTabBarButton.m */,
+				FA14F0B61E0D21A50074D251 /* UITabBar+Badge.h */,
+				FA14F0B71E0D21A50074D251 /* UITabBar+Badge.m */,
 				FAB269C91D51C072000ED39B /* DDTabBarController.h */,
 				FAB269CA1D51C072000ED39B /* DDTabBarController.m */,
 				FAB269E41D51C5EA000ED39B /* DDTabBarItem.h */,
@@ -371,10 +371,10 @@
 				FAB2699A1D51BFDC000ED39B /* AppDelegate.m in Sources */,
 				FAB269E21D51C325000ED39B /* BaseViewController.m in Sources */,
 				FAB269E61D51C5EA000ED39B /* DDTabBarItem.m in Sources */,
-				FAE725331D51D5F000555251 /* DDTabBarButton.m in Sources */,
 				FAB269CF1D51C145000ED39B /* DDNavigationController.m in Sources */,
 				FAB269971D51BFDC000ED39B /* main.m in Sources */,
 				FAE725361D51D86200555251 /* HomeDetailViewController.m in Sources */,
+				FA14F0B81E0D21A50074D251 /* UITabBar+Badge.m in Sources */,
 				FAB269DE1D51C2FB000ED39B /* HomeViewController.m in Sources */,
 				FAB269CB1D51C072000ED39B /* DDTabBarController.m in Sources */,
 			);

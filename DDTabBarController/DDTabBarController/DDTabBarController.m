@@ -8,11 +8,10 @@
 
 #import "DDTabBarController.h"
 #import "DDTabBarItem.h"
-#import "DDTabBarButton.h"
 
 @interface DDTabBarController ()
 
-@property (strong, nonatomic) DDTabBarButton *centerButton;
+@property (strong, nonatomic) UIButton *centerButton;
 
 @end
 
@@ -37,7 +36,7 @@
     [self setupViewController];
     
     [self setBadgeWithIndex:@"new" index:0];
-    [self setBadgeWithIndex:@"8" index:1];
+    [self setBadgeWithIndex:@"1" index:1];
     
     //设定Tabbar的颜色
     UIView *view = [UIView new];
@@ -49,14 +48,13 @@
 - (void)viewDidLayoutSubviews
 {
     [super viewDidLayoutSubviews];
-    [self.tabBar bringSubviewToFront:self.centerButton];
 }
 
 - (void)viewDidAppear:(BOOL)animated
 {
     [super viewDidAppear:animated];
     
-//    [self.tabBar bringSubviewToFront:self.centerButton];
+    [self.tabBar bringSubviewToFront:self.centerButton];
 }
 
 - (void)setupViewController
@@ -101,15 +99,19 @@
 #pragma mark- 创建中间按钮
 - (void)setupCenterButton
 {
-    self.centerButton = [[DDTabBarButton alloc] initWithTabBar:self.tabBar forItemIndex:2];
-    [self.centerButton setHeightOffset:5];
-    [self.centerButton setImage:[UIImage imageNamed:@"tab_bar_item3_n"]
-                                        forState:UIControlStateNormal];
+    CGRect bounds = [[UIScreen mainScreen] bounds];
+    CGFloat width = 50;
+    
+    self.centerButton = [UIButton buttonWithType:UIButtonTypeCustom];
+    self.centerButton.frame = CGRectMake((bounds.size.width - width)/2, -5, width, width);
+    [self.centerButton setImage:[UIImage imageNamed:@"tab_bar_item3_n"] forState:UIControlStateNormal];
     [self.centerButton setImage:[UIImage imageNamed:@"tab_bar_item3_s"]
-                                        forState:UIControlStateHighlighted];
+                       forState:UIControlStateHighlighted];
     [self.centerButton addTarget:self
-                     action:@selector(centerButtonPressed:)
-                                 forControlEvents:UIControlEventTouchUpInside];
+                          action:@selector(centerButtonPressed:)
+                forControlEvents:UIControlEventTouchUpInside];
+    
+    [self.tabBar addSubview:self.centerButton];
 }
 
 - (void)centerButtonPressed:(UIButton *)sender
@@ -119,8 +121,8 @@
 
 - (void)setBadgeWithIndex:(NSString *)badge index:(NSInteger)index
 {
-    UINavigationController *navi = self.viewControllers[index];
-    navi.tabBarItem.badgeValue = badge;
+//    UINavigationController *navi = self.viewControllers[index];
+//    navi.tabBarItem.badgeValue = badge;
 }
 
 - (void)didReceiveMemoryWarning {
